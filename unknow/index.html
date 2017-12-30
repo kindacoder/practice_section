@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My first HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function myFun(){
+
+
+      if(window.XMLHttpRequest){
+        req=new XMLHttpRequest();
+      }
+      else{
+        req=new ActiveXObject("Microsoft.req");
+      }
+
+req.onReadyStateChange=function();
+if(req.readyState==4 && req.sttaus==200){
+  document.getElementById('myId').innerHTML=req.responseText;
+}
+}
+      req.open('GET',"newdata.txt",true);
+      req.send();
+    }
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+  <div class="myID">
+    This text can be changed.
+  </div>
+  <button type="button" name="button" onclick="myFun();">Change</button>
+    <input id="input" type="text">
+
+    <p id="para">Hello India!</p>
+    <button id="btn1">Click</button>
+
+
+    <script src="jquery.js"></script>
+    <script src="javascript.js"></script>
+
+</body>
+
+
+</html>
