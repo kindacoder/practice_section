@@ -1,2 +1,0 @@
-I am printed with sometext.txt file-
-Some text from sometext.txt file and some passed
