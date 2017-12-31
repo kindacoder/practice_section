@@ -1,0 +1,1 @@
+I am printed with sometext.txt file-
