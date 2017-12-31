@@ -21,12 +21,21 @@ fs.writeFileSync('newFile.txt',readMe);
 /// Asynchronous file operation
 ///we use readFile and writeFile to do Asynchronous file operation
 ///because this is an Asynchronous operation so we need to provide a callback function-
+/*
 fs.readFile('sometext.txt','utf8',function(err,data){
-  // console.log(data);
-  // console.log(err);
-  // if(err) throw err;
-  fs.writeFile('writeWithAsynch.txt',data,function(error){
+console.log(data);
+console.log(err);
+if(err) throw err;
+*/
+
+
+  /*
+fs.writeFile('writeWithAsynch.txt',data,function(error){
     if (error) throw error;
   })
 })
 console.log('I will print before the File write operation Because that operation was Asynchronous');
+*/
+
+///to delete the file we will use fs.unlink('filename.txt');
+fs.unlink('sometext.txt');
