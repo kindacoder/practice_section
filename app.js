@@ -1,17 +1,13 @@
-var http=require('http');
-
-
-
-
-
-
-/*
-var server =http.createServer(function(req,res){
-  console.log('request was made to :'+req.url);
-  res.writeHead(200,{'Content-type':'text/html'})
-  res.end('Hello Ninjas !')
+var express=require('express');
+var app=express();
+app.get('/',function(req,res){
+  res.send('Hello you are on Home page!')
 })
-server.listen('3000','127.0.0.1',function(){
-  console.log('server restarted')
+app.get('/contact',function(req,res){
+  res.send('Hello you are on the contact page !')
 })
-*/
+app.get('/profile/:name',function(req,res){
+  res.send('you are viewing the profile with name of : '+req.params.name)
+})
+
+app.listen(3000);
